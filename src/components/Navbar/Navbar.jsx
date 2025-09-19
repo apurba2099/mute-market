@@ -1,12 +1,32 @@
-import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
-  // Navigation items
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setScrolled(offset > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   const navItems = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
@@ -16,104 +36,51 @@ function Navbar() {
     { path: "/contact", label: "Contact" },
   ];
 
-  // Toggle mobile menu
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  // Close menu on link click
-  const handleNavClick = (path) => {
-    navigate(path);
-    setIsMobileMenuOpen(false);
-  };
-
   return (
-    <>
-      <nav className="navbar">
-        <div className="navbar-container">
-          {/* Logo */}
-          <div className="navbar-logo">
-            <div className="navbar-logo">
-              <NavLink to="/" onClick={() => handleNavClick("/")}>
-                <img src="" alt="MUTE MARKETING Logo" className="logo-image" />
-              </NavLink>
-            </div>
-          </div>
-
-          {/* Desktop Navigation */}
-          <ul className="navbar-menu">
-            {navItems.map((item) => (
-              <li key={item.path} className="navbar-item">
-                <NavLink
-                  to={item.path}
-                  className={({ isActive }) =>
-                    `navbar-link ${isActive ? "active" : ""}`
-                  }
-                  onClick={() => handleNavClick(item.path)}
-                >
-                  {item.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-
-          {/* CTA Button */}
-          <div className="navbar-cta">
-            <NavLink
-              to="/contact"
-              className="cta-button"
-              onClick={() => handleNavClick("/contact")}
-            >
-              Get Started
-            </NavLink>
-          </div>
-
-          {/* Mobile Toggle */}
-          <div className="mobile-toggle" onClick={toggleMobileMenu}>
-            <span className={`bar ${isMobileMenuOpen ? "active" : ""}`}></span>
-            <span className={`bar ${isMobileMenuOpen ? "active" : ""}`}></span>
-            <span className={`bar ${isMobileMenuOpen ? "active" : ""}`}></span>
-          </div>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <div className="navbar-container">
+        {/* Logo */}
+        <div className="navbar-logo">
+          <Link to="/" className="logo-link">
+            <img src="./logo.png" alt="MUTE Marketing" className="logo-img" />
+          </Link>
         </div>
 
-        {/* Mobile Menu */}
-        <div className={`mobile-menu ${isMobileMenuOpen ? "active" : ""}`}>
-          <ul className="mobile-menu-list">
-            {navItems.map((item) => (
-              <li key={item.path} className="mobile-menu-item">
-                <NavLink
-                  to={item.path}
-                  className={({ isActive }) =>
-                    `mobile-menu-link ${isActive ? "active" : ""}`
-                  }
-                  onClick={() => handleNavClick(item.path)}
-                >
-                  {item.label}
-                </NavLink>
-              </li>
-            ))}
-            <li className="mobile-menu-item">
-              <NavLink
-                to="/contact"
-                className="mobile-cta-button"
-                onClick={() => handleNavClick("/contact")}
+        {/* Desktop Navigation */}
+        <ul className={`navbar-menu ${isOpen ? "active" : ""}`}>
+          {navItems.map((item, index) => (
+            <li key={index} className="navbar-item">
+              <Link
+                to={item.path}
+                className={`navbar-link ${
+                  location.pathname === item.path ? "active" : ""
+                }`}
               >
-                Get Started
-              </NavLink>
+                {item.label}
+              </Link>
             </li>
-          </ul>
-        </div>
-      </nav>
+          ))}
+        </ul>
 
-      {/* Overlay */}
-      {isMobileMenuOpen && (
+        {/* CTA Button */}
+        <div className="navbar-cta">
+          <Link to="/contact" className="cta-button">
+            Get Started
+          </Link>
+        </div>
+
+        {/* Mobile Menu Toggle */}
         <div
-          className="mobile-overlay"
-          onClick={() => setIsMobileMenuOpen(false)}
-        ></div>
-      )}
-    </>
+          className={`mobile-menu ${isOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+      </div>
+    </nav>
   );
-}
+};
 
 export default Navbar;
