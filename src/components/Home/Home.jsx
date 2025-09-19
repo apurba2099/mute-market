@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo/hero-logo.jpg";
 import "./Home.css";
 
 const Home = () => {
@@ -71,6 +72,18 @@ const Home = () => {
       description:
         "Make informed decisions with comprehensive reporting and actionable business intelligence.",
     },
+    {
+      icon: "🔍",
+      title: "SEO Optimization",
+      description:
+        "Improve your search rankings and drive organic traffic with our proven SEO strategies.",
+    },
+    {
+      icon: "📊",
+      title: "Analytics & Insights",
+      description:
+        "Make informed decisions with comprehensive reporting and actionable business intelligence.",
+    },
   ];
 
   // Testimonials data
@@ -89,6 +102,30 @@ const Home = () => {
       company: "Growth Ventures",
       content:
         "Professional, results-driven, and incredibly knowledgeable. They've become an essential part of our growth strategy.",
+      rating: 5,
+    },
+    {
+      name: "Emily Rodriguez",
+      position: "Founder",
+      company: "Creative Studio",
+      content:
+        "The ROI we've seen from their campaigns is exceptional. They truly understand our business and deliver results.",
+      rating: 5,
+    },
+    {
+      name: "Emily Rodriguez",
+      position: "Founder",
+      company: "Creative Studio",
+      content:
+        "The ROI we've seen from their campaigns is exceptional. They truly understand our business and deliver results.",
+      rating: 5,
+    },
+    {
+      name: "Emily Rodriguez",
+      position: "Founder",
+      company: "Creative Studio",
+      content:
+        "The ROI we've seen from their campaigns is exceptional. They truly understand our business and deliver results.",
       rating: 5,
     },
     {
@@ -190,7 +227,7 @@ const Home = () => {
             <div className="hero-visual">
               <div className="hero-logo-container">
                 <img
-                  src="/logo.png"
+                  src={logo}
                   alt="MUTE Marketing"
                   className="hero-logo"
                 />

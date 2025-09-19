@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/logo/logo.jpg";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -42,7 +43,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="navbar-logo">
           <Link to="/" className="logo-link">
-            <img src="./logo.png" alt="MUTE Marketing" className="logo-img" />
+            <img src={logo} alt="MUTE Marketing" className="logo-img" />
           </Link>
         </div>
 

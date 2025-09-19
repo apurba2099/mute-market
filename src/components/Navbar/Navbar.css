@@ -38,9 +38,10 @@
 }
 
 .logo-img {
-  height: 50px;
+  height: 40px;
   width: auto;
   transition: transform 0.3s ease;
+  border-radius: 50%;
 }
 
 .logo-img:hover {

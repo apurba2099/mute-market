@@ -269,6 +269,9 @@
   animation: logoFloat 6s ease-in-out infinite;
 }
 
+.hero-logo {
+  border-radius: 50%;
+}
 @keyframes logoFloat {
   0%,
   100% {
