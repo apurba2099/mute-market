@@ -33,12 +33,11 @@ function Navbar() {
         <div className="navbar-container">
           {/* Logo */}
           <div className="navbar-logo">
-            <NavLink to="/" onClick={() => handleNavClick("/")}>
-              <div className="logo-content">
-                <span className="logo-text">MUTE</span>
-                <span className="logo-subtext">MARKETING</span>
-              </div>
-            </NavLink>
+            <div className="navbar-logo">
+              <NavLink to="/" onClick={() => handleNavClick("/")}>
+                <img src="" alt="MUTE MARKETING Logo" className="logo-image" />
+              </NavLink>
+            </div>
           </div>
 
           {/* Desktop Navigation */}

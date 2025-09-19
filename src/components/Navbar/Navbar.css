@@ -19,7 +19,7 @@
 }
 
 /* Logo Styles */
-.navbar-logo a {
+/* .navbar-logo a {
   text-decoration: none;
   color: #ffd700;
 }
@@ -41,7 +41,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   margin-top: -3px;
-}
+} */
 
 /* Desktop Menu */
 .navbar-menu {
