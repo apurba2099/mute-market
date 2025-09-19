@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo/hero-logo.jpg";
 import "./Home.css";
 
-const Home = () => {
+function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [counters, setCounters] = useState({
@@ -12,6 +12,18 @@ const Home = () => {
     experience: 0,
     satisfaction: 0,
   });
+
+  //Cursor Glow feature
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  // useEffect(() => {
+  //   const handleMouseMove = (e) => {
+  //     setMousePosition({ x: e.clientX, y: e.clientY });
+  //   };
+
+  //   window.addEventListener("mousemove", handleMouseMove);
+  //   return () => window.removeEventListener("mousemove", handleMouseMove);
+  // }, []);
 
   // Hero slider data
   const heroSlides = [
@@ -196,6 +208,14 @@ const Home = () => {
 
   return (
     <div className="home">
+      {/* Cursor glow feature
+      <div
+        className="cursor-glow"
+        style={{
+          left: mousePosition.x,
+          top: mousePosition.y,
+        }}
+      /> */}
       {/* Hero Section */}
       <section className={`hero ${isVisible ? "visible" : ""}`}>
         <div className="hero-background">
@@ -207,7 +227,9 @@ const Home = () => {
           <div className="hero-content">
             <div className="hero-text">
               <span className="hero-badge">Digital Marketing Agency</span>
-              <h1 className="hero-title">{heroSlides[currentSlide].title}</h1>
+              <h1 className="hero-title-Home">
+                {heroSlides[currentSlide].title}
+              </h1>
               <h2 className="hero-subtitle">
                 {heroSlides[currentSlide].subtitle}
               </h2>
@@ -226,11 +248,7 @@ const Home = () => {
 
             <div className="hero-visual">
               <div className="hero-logo-container">
-                <img
-                  src={logo}
-                  alt="MUTE Marketing"
-                  className="hero-logo"
-                />
+                <img src={logo} alt="MUTE Marketing" className="hero-logo" />
                 <div className="logo-glow"></div>
               </div>
             </div>
@@ -412,6 +430,6 @@ const Home = () => {
       </section>
     </div>
   );
-};
+}
 
 export default Home;
