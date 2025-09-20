@@ -196,7 +196,7 @@ function Home() {
 
     const timeout = setTimeout(animateCounters, 1000);
     return () => clearTimeout(timeout);
-  }, []);
+  });
 
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, i) => (
