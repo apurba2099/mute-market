@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Services.css";
 
@@ -6,9 +6,9 @@ const Services = () => {
   const [activeService, setActiveService] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [selectedPackage, setSelectedPackage] = useState("professional");
-  const [hoveredFeature, setHoveredFeature] = useState(null);
+  const [_, setHoveredFeature] = useState(null); //hoveredFeature
   const [processStep, setProcessStep] = useState(0);
-  const servicesRef = useRef();
+  // const servicesRef = useRef();
 
   // Services data with comprehensive details
   const services = [
@@ -334,8 +334,8 @@ const Services = () => {
         <div className="hero-grid"></div>
         <div className="container">
           <div className="hero-content">
-            <span className="hero-badge">Our Expertise</span>
-            <h1 className="hero-title-Services">
+            <span className="service-hero-badge">Our Expertise</span>
+            <h1 className="service-hero-title-Services">
               Services That
               <span className="highlight-text">Transform</span>
               Your Business
@@ -514,7 +514,7 @@ const Services = () => {
           </div>
 
           <div className="pricing-grid">
-            {pricingPackages.map((pkg, index) => (
+            {pricingPackages.map((pkg) => (
               <div
                 key={pkg.id}
                 className={`pricing-card ${pkg.highlight ? "featured" : ""} ${
@@ -523,7 +523,7 @@ const Services = () => {
                 onClick={() => setSelectedPackage(pkg.id)}
               >
                 {pkg.highlight && (
-                  <div className="popular-badge">Most Popular</div>
+                  <div className="popular-badge-service">Most Popular</div>
                 )}
 
                 <div className="pricing-header-card">

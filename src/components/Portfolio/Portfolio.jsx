@@ -474,7 +474,7 @@ const Portfolio = () => {
         <div className="container">
           <div className="hero-content">
             <span className="hero-badge">Our Success Stories</span>
-            <h1 className="hero-title">
+            <h1 className="hero-title-Portfolio">
               Where
               <span className="highlight-text">Strategies</span>
               Meet Success

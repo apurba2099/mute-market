@@ -226,7 +226,7 @@ function Home() {
         <div className="container">
           <div className="hero-content">
             <div className="hero-text">
-              <span className="hero-badge">Digital Marketing Agency</span>
+              <span className="home-hero-badge">Digital Marketing Agency</span>
               <h1 className="hero-title-Home">
                 {heroSlides[currentSlide].title}
               </h1>

@@ -189,12 +189,12 @@ export default function About() {
         <div className="hero-particles"></div>
         <div className="container">
           <div className="hero-content">
-            <div className="hero-badge" data-element="badge">
+            <div className="about-hero-badge" data-element="badge">
               <span>Our Story</span>
             </div>
             <h1
-              className="hero-title-About"
-              id="hero-title-About"
+              className="about-hero-title"
+              id="about-hero-title"
               data-element="title"
             >
               Crafting Digital
