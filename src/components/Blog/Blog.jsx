@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Blog.css";
 
@@ -9,7 +9,7 @@ const Blog = () => {
   const [featuredPost, setFeaturedPost] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("latest");
-  const [readingTime, setReadingTime] = useState({});
+  const [_, setReadingTime] = useState({}); //readingTime
 
   // Blog posts data
   const blogPosts = [
