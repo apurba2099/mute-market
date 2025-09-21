@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Portfolio.css";
 
@@ -8,8 +8,8 @@ const Portfolio = () => {
   const [selectedFilter, setSelectedFilter] = useState("all");
   const [viewMode, setViewMode] = useState("carousel"); // carousel, grid, timeline
   const [isAutoPlay, setIsAutoPlay] = useState(true);
-  const [hoveredMetric, setHoveredMetric] = useState(null);
-  const projectsRef = useRef();
+  const [_, setHoveredMetric] = useState(null); //hoveredMetric
+  // const projectsRef = useRef();
 
   // Portfolio projects data
   const projects = [
@@ -473,13 +473,13 @@ const Portfolio = () => {
         <div className="hero-constellation"></div>
         <div className="container">
           <div className="hero-content">
-            <span className="hero-badge">Our Success Stories</span>
+            <span className="hero-badge-port">Our Success Stories</span>
             <h1 className="hero-title-Portfolio">
               Where
               <span className="highlight-text">Strategies</span>
               Meet Success
             </h1>
-            <p className="hero-description">
+            <p className="hero-description-Portfolio">
               Dive deep into our most impactful campaigns and discover how we
               transform businesses across industries with data-driven strategies
               and creative excellence.
