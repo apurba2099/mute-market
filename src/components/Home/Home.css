@@ -755,7 +755,6 @@
   .hero {
     min-height: 80vh;
   }
-
   .hero-buttons {
     flex-direction: column;
     align-items: center;
