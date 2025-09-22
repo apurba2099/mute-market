@@ -1123,14 +1123,26 @@
 }
 
 @media (max-width: 480px) {
+  .service-hero-badge {
+    position: relative;
+    top: 20px;
+  }
   .cursor-glow {
     display: none;
   }
 
+  .hero-metrics {
+    margin-bottom: 6px;
+  }
   .hero-grid {
     background-size: 30px 30px;
   }
 
+  .popular-badge-service {
+    position: relative;
+    text-align: center;
+    width: 200px;
+  }
   .service-card {
     padding: 1.5rem;
   }
