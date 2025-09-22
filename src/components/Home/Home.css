@@ -278,6 +278,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  top: 20px;
 }
 
 .hero-logo-container {
@@ -758,6 +759,7 @@
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    margin: 30px;
   }
 
   .stats-grid {
@@ -796,4 +798,9 @@
   opacity: 0;
   transform: translateX(30px);
   animation: fadeInRight 0.8s ease forwards;
+}
+
+.indicator {
+  position: relative;
+  top: 24px;
 }
