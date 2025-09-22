@@ -640,7 +640,7 @@
 
 .value-card:hover {
   border-color: var(--primary-yellow);
-  transform: scale(1.1);
+  transform: scale(1.01);
   box-shadow: 0 0 30px rgba(255, 255, 0, 0.4);
 }
 
@@ -965,7 +965,7 @@
   .values-orbit {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.8rem;
     margin-top: 3rem;
   }
 
