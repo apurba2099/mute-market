@@ -388,7 +388,7 @@
   transition: opacity 0.5s ease;
 }
 
-.team-card:hover .card-glow {
+.team-card:hover {
   opacity: 1;
 }
 
