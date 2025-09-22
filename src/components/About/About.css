@@ -94,7 +94,7 @@
   animation: slideInUp 1s ease 0.2s forwards;
 }
 
-.hero-badge::before {
+.about-hero-badge::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1036,6 +1036,10 @@
 
   .about-cta {
     padding: 4rem 0;
+  }
+  .about-hero-badge {
+    position: relative;
+    top: 12px;
   }
 }
 
