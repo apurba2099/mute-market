@@ -1525,6 +1525,10 @@
 }
 
 @media (max-width: 480px) {
+  .contact-hero-badge {
+    position: relative;
+    top: 22px;
+  }
   .contact-cursor-glow {
     display: none;
   }
