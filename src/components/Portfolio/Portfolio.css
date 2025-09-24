@@ -1405,17 +1405,28 @@
   .hero-constellation {
     background-size: 200px 200px;
   }
-  .portfolio-controls {
-    padding: 2rem 0;
+
+  .hero-badge-port {
+    position: relative;
+    top: 20px;
   }
 
+  .portfolio-controls {
+    position: relative;
+    top: 20px;
+    padding: 2rem 0;
+    margin: 8px;
+    border-radius: 20px;
+  }
   .filter-tabs {
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 
   .filter-tab {
-    width: 100%;
+    padding: 8px 10px;
+    width: 40%;
     justify-content: center;
   }
 
