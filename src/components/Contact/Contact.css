@@ -112,6 +112,7 @@
   letter-spacing: 3px;
   margin-bottom: 2.5rem;
   position: relative;
+  top: 20px;
   animation: contactBadgeVibrate 6s ease-in-out infinite;
 }
 
