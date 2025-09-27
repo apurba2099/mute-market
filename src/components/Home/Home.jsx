@@ -42,19 +42,19 @@ function Home() {
       cta: "See Our Results",
     },
     {
-      title: "Your Success Is Our Mission",
-      subtitle: "Partnership-Focused Approach",
+      title: "Shhh...Your brand is the next big trendsetter",
+      subtitle: "Outsmart the Market Supercharged by AI",
       description:
-        "We don't just provide services – we become your strategic partner in building a powerful digital ecosystem.",
-      cta: "Partner With Us",
+        "Your competitors are stealling your clients. AI makes sure they never touch your brand again",
+      cta: "Free Consultation",
     },
   ];
 
   // Stats data
   const stats = [
-    { label: "Projects Completed", value: 500, suffix: "+" },
-    { label: "Happy Clients", value: 250, suffix: "+" },
-    { label: "Years Experience", value: 8, suffix: "+" },
+    { label: "Projects Completed", value: 200, suffix: "+" },
+    { label: "Happy Clients", value: 50, suffix: "+" },
+    { label: "Years Experience", value: 3, suffix: "+" },
     { label: "Client Satisfaction", value: 98, suffix: "%" },
   ];
 
@@ -62,39 +62,51 @@ function Home() {
   const servicesPreview = [
     {
       icon: "📱",
+      title: "Content Creation",
+      description:
+        "Silent storytelling that sparks attention, builds trust and transforms curious audiences into loyal lifelong brand advocates",
+    },
+    {
+      icon: "🌐",
       title: "Social Media Marketing",
       description:
-        "Engage your audience across all major platforms with strategic content and targeted campaigns.",
-    },
-    {
-      icon: "🎯",
-      title: "PPC Advertising",
-      description:
-        "Maximize your ROI with data-driven pay-per-click campaigns that convert visitors into customers.",
+        "Mute Marketing delivers quiet, precise social campaigns that silently grow influence, engagement, and loyal customer base",
     },
     {
       icon: "🔍",
-      title: "SEO Optimization",
+      title: "Branding",
       description:
-        "Improve your search rankings and drive organic traffic with our proven SEO strategies.",
+        "With our 360° marketing, your brand rises while all other brands stay silent",
     },
     {
       icon: "📊",
-      title: "Analytics & Insights",
+      title: "Website Development",
       description:
-        "Make informed decisions with comprehensive reporting and actionable business intelligence.",
+        "Mute Marketing crafts subtle, high-impact websites that attract clients naturally while delivering seamless user experiences.",
     },
     {
-      icon: "🔍",
-      title: "SEO Optimization",
+      icon: "📲",
+      title: "App Development",
       description:
-        "Improve your search rankings and drive organic traffic with our proven SEO strategies.",
+        "Strategic app development that engages, converts, and builds brand authority without ever shouting for attention.",
     },
     {
-      icon: "📊",
-      title: "Analytics & Insights",
+      icon: "📈",
+      title: "Vibe Marketing",
       description:
-        "Make informed decisions with comprehensive reporting and actionable business intelligence.",
+        "Let AI amplify your brand's vibe-silently attracting clients, engaging audiences, and coverting effortlessly.",
+    },
+    {
+      icon: "📷",
+      title: "Photography",
+      description:
+        "Capture, Showcase, Dominate. Let the world withness your business's strength, capability, and unstoppable growth",
+    },
+    {
+      icon: "📹",
+      title: "Videography",
+      description:
+        "Every frame tells your brand's story with a cinematic impact- loud, proud, and immpossible to ignore.",
     },
   ];
 
@@ -226,7 +238,7 @@ function Home() {
         <div className="container">
           <div className="hero-content">
             <div className="hero-text">
-              <span className="home-hero-badge">Digital Marketing Agency</span>
+              <span className="home-hero-badge">Advertising Agency</span>
               <h1 className="hero-title-Home">
                 {heroSlides[currentSlide].title}
               </h1>
@@ -299,8 +311,10 @@ function Home() {
           <div className="section-header text-center">
             <h2>Our Core Services</h2>
             <p className="section-description">
-              We provide comprehensive digital marketing solutions tailored to
-              your business needs
+              We craft next-level AI powered Solution tailored to your
+              business-built to attract, convert and dominate. Because, our
+              branding expertise makes your business the name customers can't
+              ignore.
             </p>
           </div>
 
@@ -335,36 +349,41 @@ function Home() {
                 <div className="feature-item">
                   <span className="feature-icon">✓</span>
                   <div>
-                    <h4>Proven Track Record</h4>
+                    <h4>Proven Excellence:</h4>
                     <p>
-                      Over 500+ successful campaigns with measurable results
+                      Join 50+ happy clients who trust us to deliver real,
+                      measurable results.
                     </p>
                   </div>
                 </div>
                 <div className="feature-item">
                   <span className="feature-icon">✓</span>
                   <div>
-                    <h4>Data-Driven Approach</h4>
+                    <h4>AI + Human Brilliance:</h4>
                     <p>
-                      Every strategy is backed by comprehensive analytics and
-                      insights
+                      Harness the perfect blend of cutting-edgeAI with expert
+                      human strategy.
                     </p>
                   </div>
                 </div>
                 <div className="feature-item">
                   <span className="feature-icon">✓</span>
                   <div>
-                    <h4>Dedicated Support</h4>
+                    <h4>Dedicated Support:</h4>
                     <p>
-                      24/7 customer support and dedicated account management
+                      Speak directly to the team owning yourproject—no
+                      middlemen, no delays.(T&C Applied).
                     </p>
                   </div>
                 </div>
                 <div className="feature-item">
                   <span className="feature-icon">✓</span>
                   <div>
-                    <h4>Transparent Reporting</h4>
-                    <p>Regular updates and detailed performance reports</p>
+                    <h4>Transparent Performance:</h4>
+                    <p>
+                      Stay in control with regular, detailed updatesshowing
+                      exactly how your brand grows.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -414,8 +433,8 @@ function Home() {
           <div className="cta-content text-center">
             <h2>Ready to Grow Your Business?</h2>
             <p>
-              Let's discuss how we can help you achieve your digital marketing
-              goals
+              Let’s unlock your business’s full potential and achieve the
+              success you envision.
             </p>
             <div className="cta-buttons">
               <Link to="/contact" className="btn btn-primary">
